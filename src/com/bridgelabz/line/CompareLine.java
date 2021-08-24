@@ -18,6 +18,7 @@ public class CompareLine {
 		System.out.println("the length is : "+ len1);
 		System.out.println("the end points of 2nd line are (x1,y1):("+p2x1+","+p2y1+")  (x2,y2):("+p2x2+","+p2y2+")");
 		System.out.println("the length is : "+ len2);
+		System.out.println("Are 2 lines equals : "+len1.equals(len2));
 		int i = len1.compareTo(len2);
 		if(i == 0) System.out.println("the lines are equal");
 		else if(i<0) System.out.println("the 2nd line is greater than the 1st one in length");
