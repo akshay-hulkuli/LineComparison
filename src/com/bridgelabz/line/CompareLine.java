@@ -1,45 +1,38 @@
 package com.bridgelabz.line;
 
+import java.util.Scanner;
+
 public class CompareLine {
 	
-	private static int p1x1=0,p1y1=0,p1x2=0,p1y2=0,p2x1=0,p2x2=0,p2y1=0,p2y2=0;
-	
-	private static void generatePoints() {
-		p1x1 = (int) Math.floor(Math.random()*100);
-		p1y1 = (int) Math.floor(Math.random()*100);
-		p1x2 = (int) Math.floor(Math.random()*100);
-		p1y2 = (int) Math.floor(Math.random()*100);
-		p2x1 = (int) Math.floor(Math.random()*100);
-		p2y1 = (int) Math.floor(Math.random()*100);
-		p2x2 = (int) Math.floor(Math.random()*100);
-		p2y2 = (int) Math.floor(Math.random()*100);
-	}
-	
-	private static void compareLines(Double length1, Double length2) {
-		
-		System.out.println("the end points of 1st line are (x1,y1):("+p1x1+","+p1y1+")  (x2,y2):("+p1x2+","+p1y2+")");
-		System.out.println("the length is : "+ length1);
-		System.out.println("the end points of 2nd line are (x1,y1):("+p2x1+","+p2y1+")  (x2,y2):("+p2x2+","+p2y2+")");
-		System.out.println("the length is : "+ length2);
-		System.out.println("Are 2 lines equals : "+length1.equals(length2));
-		int i = length1.compareTo(length2);
-		if(i == 0) System.out.println("the lines are equal");
-		else if(i<0) System.out.println("the 2nd line is greater than the 1st one in length");
-		else System.out.println("the 1st line is greater than the 2nd line in length");
-		
-	}
-	public static void main(String[] args) {
-		System.out.println("Welcome to Line Comparison Computaion program");
-		
-		generatePoints();
-		
-		//calculate lengths 
-		Double length1 =  Math.sqrt(Math.pow(p1x2-p1x1,2)+Math.pow(p1y2-p1y1,2));
-		Double length2 =  Math.sqrt(Math.pow(p2x2-p2x1,2)+Math.pow(p2y2-p2y1,2));
-		
-		//compare them based on lenghts
-		compareLines(length1,length2);
-		
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Welcome to Line Comparison Computaion program");
+			int x1,x2,y1,y2,m1,m2,n1,n2;
+			Line line1 = new Line();
+			System.out.println("Enter coodinates of First point, in the order: x1,y1,x2,y2");
+			x1 = sc.nextInt();
+			y1 = sc.nextInt();
+			x2 = sc.nextInt();
+			y2 = sc.nextInt();
+			line1.setPoint1(x1, y1);
+			line1.setPoint2(x2, y2);
+			
+			Line line2 = new Line();
+			System.out.println("Enter coodinates of Second point, in the order: m1,n1,m2,n2");
+			m1 = sc.nextInt();
+			n1 = sc.nextInt();
+			m2= sc.nextInt();
+			n2 = sc.nextInt();
+			line2.setPoint1(m1, n1);
+			line2.setPoint2(m2, n2);
+			
+			sc.close();
+			
+			LineComparatorImpl lineComparator = new LineComparatorImpl();
+			
+			lineComparator.compareUsingEquals(line1, line2);
+			lineComparator.compareUsingCompareTo(line1, line2);
+			
 		
 	}
 
