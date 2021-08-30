@@ -10,5 +10,4 @@ public class LengthCalculatorImpl implements LengthCalculatorIF {
 		length = Math.sqrt(Math.pow(2, (point2.getX()-point1.getX()) )  +  ( Math.pow(2, ( point2.getY()-point1.getY() ) ) ) );
 		return length;
 	}
-	
 }
