@@ -12,5 +12,4 @@ public class CompareLine {
 		System.out.println("the points are (x1,y1):("+x1+","+y1+")  (x2,y2):("+x2+","+y2+")");
 		System.out.println("the length is : "+ len);
 	}
-
 }
