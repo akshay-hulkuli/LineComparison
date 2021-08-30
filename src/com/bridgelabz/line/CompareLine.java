@@ -24,5 +24,4 @@ public class CompareLine {
 		else System.out.println("the 1st line is greater than the 2nd line in length");
 		
 	}
-
 }
