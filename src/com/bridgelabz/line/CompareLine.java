@@ -20,7 +20,6 @@ public class CompareLine {
 		System.out.println("the length is : "+ len2);
 		System.out.println("Are they equal in length : "+len1.equals(len2));
 		
-		
 	}
 
 }
