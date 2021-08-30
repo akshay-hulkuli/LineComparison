@@ -26,5 +26,4 @@ public class LineComparatorImpl implements LineComparatorIF {
 		else if(result < 0) System.out.println("line2 is greater then line1 ");
 		else System.out.println("line1 is greater then line2 ");
 	}
-	
 }
