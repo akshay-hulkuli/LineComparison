@@ -25,5 +25,4 @@ public class Point {
 	public void setY(int y) {
 		yCoordinate = y;
 	}
-
 }
