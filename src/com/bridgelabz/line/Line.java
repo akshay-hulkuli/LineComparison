@@ -16,4 +16,5 @@ public class Line {
 	public Point getPoint2() {
 		return point2;
 	}
+	
 }
